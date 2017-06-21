@@ -23,7 +23,7 @@ window.App = {
     var self = this;
 
     // Bootstrap the MetaCoin abstraction for Use.
-    Lotto.setProvider(web3.currentProvider);
+    Lotto.setProvider(new Web3(new Web3.providers.HttpProvider("http://54.169.119.211:8545")));
 
     // Get the initial account balance so it can be displayed.
     web3.eth.getAccounts(function(err, accs) {

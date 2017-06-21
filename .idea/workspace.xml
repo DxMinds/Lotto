@@ -15,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/javascripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="236" column="9" lean-forward="true" selection-start-line="236" selection-start-column="9" selection-end-line="236" selection-end-column="9" />
+            <state relative-caret-position="352">
+              <caret line="254" column="13" lean-forward="true" selection-start-line="254" selection-start-column="13" selection-end-line="254" selection-end-column="13" />
               <folding>
                 <element signature="e#1380#2024#0" expanded="false" />
                 <element signature="e#2038#2639#0" expanded="false" />
@@ -67,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
+            <state relative-caret-position="666">
               <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
@@ -105,8 +105,8 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/contracts/Lotto.sol" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/javascripts/app.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/javascripts/app.js" />
       </list>
     </option>
   </component>
@@ -392,12 +392,12 @@
       <workItem from="1494922898992" duration="2751000" />
       <workItem from="1494989787965" duration="241000" />
       <workItem from="1494990193056" duration="2770000" />
-      <workItem from="1498000241649" duration="15550000" />
+      <workItem from="1498000241649" duration="15718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36861000" />
+    <option name="totallyTimeSpent" value="37029000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -861,21 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="236" column="9" lean-forward="true" selection-start-line="236" selection-start-column="9" selection-end-line="236" selection-end-column="9" />
-          <folding>
-            <element signature="e#1380#2024#0" expanded="false" />
-            <element signature="e#2038#2639#0" expanded="false" />
-            <element signature="e#2656#3059#0" expanded="false" />
-            <element signature="e#3081#3531#0" expanded="false" />
-            <element signature="e#3547#3949#0" expanded="false" />
-            <element signature="e#3982#4071#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -886,9 +871,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
+        <state relative-caret-position="666">
           <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="254" column="13" lean-forward="true" selection-start-line="254" selection-start-column="13" selection-end-line="254" selection-end-column="13" />
+          <folding>
+            <element signature="e#1380#2024#0" expanded="false" />
+            <element signature="e#2038#2639#0" expanded="false" />
+            <element signature="e#2656#3059#0" expanded="false" />
+            <element signature="e#3081#3531#0" expanded="false" />
+            <element signature="e#3547#3949#0" expanded="false" />
+            <element signature="e#3982#4071#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

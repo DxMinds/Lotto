@@ -22584,12 +22584,12 @@ module.exports = {
 				}
 			},
 			"links": {},
-			"address": "0x3ee1e72235bb4675c357e43855011760aa8783c3",
-			"updated_at": 1498009461781
+			"address": "0xb5776181b238b538ecd768380df729099abca99b",
+			"updated_at": 1498016507439
 		}
 	},
 	"schema_version": "0.0.5",
-	"updated_at": 1498009461781
+	"updated_at": 1498016507439
 };
 
 /***/ }),
@@ -22699,7 +22699,7 @@ window.App = {
     var self = this;
 
     // Bootstrap the MetaCoin abstraction for Use.
-    Lotto.setProvider(web3.currentProvider);
+    Lotto.setProvider(new __WEBPACK_IMPORTED_MODULE_0_web3___default.a(new __WEBPACK_IMPORTED_MODULE_0_web3___default.a.providers.HttpProvider("http://54.169.119.211:8545")));
 
     // Get the initial account balance so it can be displayed.
     web3.eth.getAccounts(function(err, accs) {
