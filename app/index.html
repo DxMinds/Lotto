@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lotto Game</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--<link rel="stylesheet" href="stylesheets/app.css" />-->
+  <style>
+    /*@font-face {
+      font-family: Poppins-Regular;
+      src: url(fonts/Poppins-Regular.ttf);
+    }*/
+    html
+    {
+      height: 100%;
+    }
+    body
+    {
+      height: 100%;
+      background-image: url("http://preview.ibb.co/krDAyQ/2.png");
+      background-size: cover;
+      background-repeat:no-repeat;
+      font-family: Poppins-Regular;
+      margin: 0 !important;
+    }
+    .head
+    {
+      font-size: 44px;
+      padding: 3%;
+      font-weight: 600;
+      color: aliceblue;
+    }
+    .txt_cn
+    {
+      text-align: center;
+    }
+    .subscribe_btn
+    {
+      display: inline-block;
+      vertical-align: top;
+      background: #009688;
+      color: #fff;
+      padding: 11px 35px 11px 35px;
+      transition: all ease 0.5s;
+      font-size: 25px;
+      border: 0px !important;
+      margin: 20px;
+      cursor: pointer;
+    }
+    .subscribe_btn:hover
+    {
+      box-shadow: 6px 6px 0px 1px #3b796f;
+      transition: all ease 0.5s;
+    }
+    .email_btn
+    {
+      display: inline-block;
+      vertical-align: top;
+      background: #009688;
+      color: #fff;
+      padding: 11px 35px 11px 35px;
+      transition: all ease 0.5s;
+      font-size: 25px;
+      border: 0px !important;
+      margin: 20px;
+    }
+    .email_btn:hover
+    {
+      box-shadow: 6px 6px 0px 1px #3b796f;
+      transition: all ease 0.5s;
+    }
+    .sbmt_wrap
+    {
+      width: 34%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .contact_blocks
+    {
+      position: relative;
+      margin-top: 30px;
+    }
+    .contact_blocks input
+    {
+      width: 100%;
+      border: 0px solid;
+      border-bottom: 2px solid white;
+      background-color: rgba(230, 230, 230, 0);
+      color: white;
+      font-size: 22px;
+    }
+    .floating-label {
+      position: absolute;
+      pointer-events: none;
+      left: 1px;
+      top: -1px;
+      transition: 0.2s ease all;
+      font-size: 16px;
+      color: white;
+    }
+
+    input:focus ~ .floating-label,
+    input:not(:focus):valid ~ .floating-label {
+      top: -25px;
+      /*bottom: 70px;*/
+      left: 0px;
+      font-size: 11px;
+      opacity: 1;
+      color: white;
+    }
+    input:focus
+    {
+      outline: none;
+    }
+    button:focus
+    {
+      outline: none;
+    }
+    .ticket_wrap
+    {
+      width: 34%;
+      margin: 0 auto;
+      margin-top: 55px;
+    }
+    .tckt input
+    {
+      width: 60%;
+      float: left;
+    }
+    .inp_btns
+    {
+      width: 39%;
+      float: left;
+      text-align: center;
+    }
+    .random_btn
+    {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 13px;
+      margin: 7px;
+      background-color: #a71d28;
+      padding: 3px 6px 3px 6px;
+      color: white;
+      margin-top: 0px;
+      cursor: pointer;
+      transition: all ease 0.5s;
+    }
+    .random_btn:hover
+    {
+      box-shadow: 2px 2px 0px 1px #ab3c3c;
+      transition: all ease 0.5s;
+    }
+    .buy_now
+    {
+      margin-top: 40px;
+    }
+
+    .hoverClass{
+      box-shadow: 6px 6px 0px 1px #3b796f;
+      transition: all ease 0.5s;
+    }
+
+    .line{
+      height: 2px;
+      width: 100%;
+      background-color: white;
+    }
+    .winnerH{
+      text-align: center;
+      color: wheat;
+      font-size: 28px;
+      margin-top: 31px;
+    }
+    .buttons{
+      margin-top: 30px;
+      margin-left: 26%;
+    }
+    .emailContainer{
+      display: none;
+      /*color: white;*/
+    }
+    .addressvalues{
+      /*color: white;*/
+    }
+    .colorWhite{
+      color: white;
+    }
+      .nextTicket{
+          color: white;
+          float: right;
+          margin-left: 34%;
+          margin-top: -6%;
+          position: absolute;
+      }
+  </style>
+
+
+
+
+
+
+
+
+
+  <script src="./app.js"></script>
+</head>
+<body>
+<div class="head">
+  Lotto
+</div>
+<p class="nextTicket">Next Draw is on Friday 12 PM. Grab your ticket now</p>
+<div id="home_page">
+
+  <!--<input id="ticket">-->
+  <section class="txt_cn">
+    <button id="anonymous" class=" bbtn hoverClass subscribe_btn">Anonymous</button>
+    <button id="emails" class="email_btn bbtn" >Using Email</button>
+    <section>
+      <div class="sbmt_wrap">
+        <div class="contact_blocks">
+          <input type="text" id="address" required="">
+          <span id="text" class="floating-label">Address</span>
+        </div>
+      </div>
+      <div class="ticket_wrap">
+        <div class="contact_blocks tckt">
+          <input type="text" id="ticket" required="">
+          <span class="floating-label">Ticket</span>
+
+          <div class="inp_btns">
+            <div class="inp_btns_wrp">
+              <div class="random_btn" onclick="App.randomTicket()">
+                Random
+              </div>
+              <div class="random_btn" onclick="App.resetTicket()">
+                Reset
+              </div>
+            </div>
+          </div>
+
+          <div style="clear:both;"></div>
+        </div>
+      </div>
+    </section>
+    <div class="buy_now subscribe_btn" id="buyannonticket" onclick="App.buyAnnonymously()">
+      Buy Now
+    </div>
+    <div class="buy_now subscribe_btn" id="buyemailticket" style="display: none" onclick="App.buyEmail()">
+      Buy Now
+    </div>
+  </section>
+
+</div>
+
+<p id="status" style="color:white;text-align: center;margin-bottom: 37px"></p>
+
+<div class="line"> </div>
+<div class="winnerH"> Previous Winning Number - 5</div>
+
+<div class = "buttons">
+  <button id="anony" class=" bbtnn hoverClass subscribe_btn">Anonymous</button>
+  <button id="emailb" class=" bbtnn email_btn bbtnn" >Using Email</button>
+
+  <!--<div class="addresscontainer">-->
+  <!--<p class="addressvalues">0xa3fe091c3ccc8d804cc631193a66ba0146eeee1f</p>-->
+  <!--<p class="addressvalues">0x2a4dcb8de1203c690e37cc5eeeac05fef20dc454</p>-->
+  <!--<p class="addressvalues">0x193eda59dc599ca5ddd368b3471104245432e6fd</p>-->
+  <!--<p class="addressvalues">0x5d16158b5de5bd5c4e80b7736237e44b8d3cf6e3</p>-->
+  <!--<p class="addressvalues">0x9b56ea5cacd121a0d9a5b5ebbd99c3633cee3dfc</p>-->
+  <!--</div>-->
+
+  <!--<div class="emailContainer">-->
+  <!--<p class="emailvalues">aj@accubits.com</p>-->
+  <!--<p class="emailvalues">arunjayakumar07@gmail.com </p>-->
+  <!--<p class="emailvalues">rahular@accubits.com</p>-->
+  <!--<p class="emailvalues">amal@accubits.com</p>-->
+  <!--<p class="emailvalues">arun@accubits.com</p>-->
+  <!--</div>-->
+
+  <div class="contact_blocks" style="background-color: #233d58;">
+    <input type="text" id="check" required="">
+    <span id="checkspan" class="floating-label">Address</span>
+      <div class="buy_now subscribe_btn"  onclick="App.checkNumber()">
+         Claim Your Number
+      </div>
+  </div>
+
+
+
+
+
+</div>
+
+
+
+<script>
+
+window.onload = function () {
+
+    $('#anonymous').click(function () {
+        $('.bbtn').removeClass('hoverClass');
+        $('#anonymous').addClass('hoverClass');
+        $('#buyemailticket').hide();
+        $('#buyannonticket').show();
+        $('#text').text('Address');
+        $('#address').val('');
+        $('#ticket').val('');
+    });
+
+    $('#emails').click(function () {
+        $('.bbtn').removeClass('hoverClass');
+        $('#emails').addClass('hoverClass');
+        $('#buyannonticket').hide();
+        $('#buyemailticket').show();
+        $('#text').text('Email');
+        $('#address').val('');
+        $('#ticket').val('');
+    });
+
+
+    $('#anony').click(function () {
+        $('.bbtnn').removeClass('hoverClass');
+        $('#anony').addClass('hoverClass');
+        $('#checkspan').text('Address');
+
+    });
+
+    $('#emailb').click(function () {
+        $('.bbtnn').removeClass('hoverClass');
+        $('#emailb').addClass('hoverClass');
+        $('#checkspan').text('Email')
+
+    });
+
+
+
+
+}
+</script>
+
+
+
+
+</body>
+</html>
