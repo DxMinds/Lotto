@@ -22584,12 +22584,53 @@ module.exports = {
 				}
 			},
 			"links": {},
-			"address": "0xb5776181b238b538ecd768380df729099abca99b",
-			"updated_at": 1498016507439
+			"address": "0x6a509490e902195319dff9befa8b9cd074b3508a",
+			"updated_at": 1498016625308
+		},
+		"1498016020941": {
+			"events": {
+				"0xfef4ca33b89ebb5f20fd523d7b35455275881d523ab396b3f6fdbdf3b4257414": {
+					"anonymous": false,
+					"inputs": [
+						{
+							"indexed": false,
+							"name": "bidder",
+							"type": "address"
+						},
+						{
+							"indexed": false,
+							"name": "amount",
+							"type": "uint256"
+						}
+					],
+					"name": "LottoPurchased",
+					"type": "event"
+				},
+				"0x1b5b1ef1a4457a565fa7a62bf3085f0e5fb9e5b6610b0f936256c4657eeaeee2": {
+					"anonymous": false,
+					"inputs": [
+						{
+							"indexed": false,
+							"name": "winner",
+							"type": "address"
+						},
+						{
+							"indexed": false,
+							"name": "amount",
+							"type": "uint256"
+						}
+					],
+					"name": "LottoDrawCompleted",
+					"type": "event"
+				}
+			},
+			"links": {},
+			"address": "0x27efc36971fd35597c1880e7e98fb50193f2b089",
+			"updated_at": 1498017289268
 		}
 	},
 	"schema_version": "0.0.5",
-	"updated_at": 1498016507439
+	"updated_at": 1498017289268
 };
 
 /***/ }),
@@ -22699,7 +22740,7 @@ window.App = {
     var self = this;
 
     // Bootstrap the MetaCoin abstraction for Use.
-    Lotto.setProvider(new __WEBPACK_IMPORTED_MODULE_0_web3___default.a(new __WEBPACK_IMPORTED_MODULE_0_web3___default.a.providers.HttpProvider("http://54.169.119.211:8545")));
+    Lotto.setProvider(new __WEBPACK_IMPORTED_MODULE_0_web3___default.a.providers.HttpProvider("http://54.169.119.211:8545"));
 
     // Get the initial account balance so it can be displayed.
     web3.eth.getAccounts(function(err, accs) {
