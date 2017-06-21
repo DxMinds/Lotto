@@ -1,0 +1,618 @@
+{
+  "contract_name": "Lotto",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "userIdent",
+          "type": "address"
+        },
+        {
+          "name": "myBall",
+          "type": "uint256"
+        }
+      ],
+      "name": "buyAnnoyTicket",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "paidEmail",
+      "outputs": [
+        {
+          "name": "selectedBall",
+          "type": "uint256"
+        },
+        {
+          "name": "buyerAddress",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "ticketPrize",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "paidAnony",
+      "outputs": [
+        {
+          "name": "selectedBall",
+          "type": "uint256"
+        },
+        {
+          "name": "buyerAddress",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "drawTime",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getWinnerShare",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "winningBall",
+          "type": "uint256"
+        }
+      ],
+      "name": "lottoEnd",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "checkingAddress",
+          "type": "string"
+        }
+      ],
+      "name": "checkWinner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "winnersEmail",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "beneficiary",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "winnerShare",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "winnersAnony",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "userIdent",
+          "type": "string"
+        },
+        {
+          "name": "myBall",
+          "type": "uint256"
+        }
+      ],
+      "name": "buyEmailTicket",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "startTime",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalMoney",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "bidder",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "LottoPurchased",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "winner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "LottoDrawCompleted",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x606060405234610000575b610988806100196000396000f300606060405236156100bf5763ffffffff60e060020a60003504166306d23da681146100c45780630a26720d146100f257806316ebd967146101915780631c378dad146101b057806324ac60a7146101e157806328a785d1146102005780632a67a0e81461021f5780632c9790f114610231578063341c7da21461029657806338af3eed14610326578063572e4f501461034f57806361cc882c1461036e578063780d63271461039a57806378e979251461040157806387da21e314610420575b610000565b34610000576100e0600160a060020a036004351660243561043f565b60408051918252519081900360200190f35b346100005761010260043561050f565b604080518381526020810182815283546002600019610100600184161502019091160492820183905290916060830190849080156101815780601f1061015657610100808354040283529160200191610181565b820191906000526020600020905b81548152906001019060200180831161016457829003601f168201915b5050935050505060405180910390f35b34610000576100e0610537565b60408051918252519081900360200190f35b34610000576101c060043561053d565b60408051928352600160a060020a0390911660208301528051918290030190f35b34610000576100e0610572565b60408051918252519081900360200190f35b34610000576100e0610578565b60408051918252519081900360200190f35b346100005761022f60043561057f565b005b34610000576100e0600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437509496506105af95505050505050565b60408051918252519081900360200190f35b34610000576102a66004356106c9565b6040805160208082528351818301528351919283929083019185019080838382156102ec575b8051825260208311156102ec57601f1990920191602091820191016102cc565b505050905090810190601f1680156103185780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3461000057610333610771565b60408051600160a060020a039092168252519081900360200190f35b34610000576100e0610780565b60408051918252519081900360200190f35b3461000057610333600435610786565b60408051600160a060020a039092168252519081900360200190f35b34610000576100e0600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284375094965050933593506107b692505050565b60408051918252519081900360200190f35b34610000576100e0610950565b60408051918252519081900360200190f35b34610000576100e0610956565b60408051918252519081900360200190f35b6000600680548060010182818154818355818115116104aa576002028160020283600052602060002091820191016104aa91905b808211156104a6576000815560018101805473ffffffffffffffffffffffffffffffffffffffff19169055600201610473565b5090565b5b505050916000526020600020906002020160005b5060408051808201909152848152600160a060020a03861660209091018190528482556001918201805473ffffffffffffffffffffffffffffffffffffffff191690911790559150505b92915050565b600781815481101561000057906000526020600020906002020160005b508054915060010182565b60035481565b600681815481101561000057906000526020600020906002020160005b508054600190910154909150600160a060020a031682565b60025481565b6004545b90565b60078054600654810160055560009081101561000057906000526020600020906002020160005b50546004555b50565b6000805b6009548110156106c257600981815481101561000057906000526020600020900160005b5060405180828054600181600116156101000203166002900480156106335780601f10610611576101008083540402835291820191610633565b820191906000526020600020905b81548152906001019060200180831161061f575b50506040519081900381208651909350869250819060208401908083835b602083106106705780518252601f199092019160209182019101610651565b6001836020036101000a03801982511681845116808217855250505050505090500191505060405180910390206000191614156106b057600191506106c2565b600091506106c2565b5b6001016105b3565b5b50919050565b600981815481101561000057906000526020600020900160005b508054604080516020601f6002600019610100600188161502019095169490940493840181900481028201810190925282815293508301828280156107695780601f1061073e57610100808354040283529160200191610769565b820191906000526020600020905b81548152906001019060200180831161074c57829003601f168201915b505050505081565b600054600160a060020a031681565b60045481565b600881815481101561000057906000526020600020900160005b915054906101000a9004600160a060020a031681565b6000600780548060010182818154818355818115116108665760020281600202836000526020600020918201910161086691905b808211156104a6576000600082016000905560018201805460018160011615610100020316600290046000825580601f106108255750610857565b601f01602090049060005260206000209081019061085791905b808211156104a6576000815560010161083f565b5090565b5b50506002016107ea565b5090565b5b505050916000526020600020906002020160005b604060405190810160405280868152602001878152509091909150600082015181600001556020820151816001019080519060200190828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106108f257805160ff191683800117855561091f565b8280016001018555821561091f579182015b8281111561091f578251825591602001919060010190610904565b5b506109409291505b808211156104a6576000815560010161083f565b5090565b5050505050600190505b92915050565b60015481565b600554815600a165627a7a723058208e3868ac9a8300eb978634cc1b5994ca5ebd8dd7e348ff2715eb46178bd780110029",
+  "networks": {
+    "1494851349794": {
+      "events": {
+        "0xfef4ca33b89ebb5f20fd523d7b35455275881d523ab396b3f6fdbdf3b4257414": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "bidder",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoPurchased",
+          "type": "event"
+        },
+        "0x1b5b1ef1a4457a565fa7a62bf3085f0e5fb9e5b6610b0f936256c4657eeaeee2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "winner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoDrawCompleted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xf874d1df5bdfb5faf3be5df334365b0e7f3930aa",
+      "updated_at": 1494903924154
+    },
+    "1494904799213": {
+      "events": {
+        "0xfef4ca33b89ebb5f20fd523d7b35455275881d523ab396b3f6fdbdf3b4257414": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "bidder",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoPurchased",
+          "type": "event"
+        },
+        "0x1b5b1ef1a4457a565fa7a62bf3085f0e5fb9e5b6610b0f936256c4657eeaeee2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "winner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoDrawCompleted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x3cb77b6ab701e95e3147a1ac17d9db1ef026905c",
+      "updated_at": 1494904854357
+    },
+    "1494904950190": {
+      "events": {
+        "0xfef4ca33b89ebb5f20fd523d7b35455275881d523ab396b3f6fdbdf3b4257414": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "bidder",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoPurchased",
+          "type": "event"
+        },
+        "0x1b5b1ef1a4457a565fa7a62bf3085f0e5fb9e5b6610b0f936256c4657eeaeee2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "winner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoDrawCompleted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xfaf37e21773290f36cb9a8811130b9f1381fba97",
+      "updated_at": 1494905018922
+    },
+    "1494905068499": {
+      "events": {
+        "0xfef4ca33b89ebb5f20fd523d7b35455275881d523ab396b3f6fdbdf3b4257414": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "bidder",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoPurchased",
+          "type": "event"
+        },
+        "0x1b5b1ef1a4457a565fa7a62bf3085f0e5fb9e5b6610b0f936256c4657eeaeee2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "winner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoDrawCompleted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x30768fa8e8349fd4b2fcfa114f9b2d0221463ced",
+      "updated_at": 1494916707574
+    },
+    "1494919013397": {
+      "events": {
+        "0xfef4ca33b89ebb5f20fd523d7b35455275881d523ab396b3f6fdbdf3b4257414": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "bidder",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoPurchased",
+          "type": "event"
+        },
+        "0x1b5b1ef1a4457a565fa7a62bf3085f0e5fb9e5b6610b0f936256c4657eeaeee2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "winner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoDrawCompleted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xe8e373e4b08b9f2f4407f5cf6c43bbbbf2866a9c",
+      "updated_at": 1494919061101
+    },
+    "1494922667022": {
+      "events": {
+        "0xfef4ca33b89ebb5f20fd523d7b35455275881d523ab396b3f6fdbdf3b4257414": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "bidder",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoPurchased",
+          "type": "event"
+        },
+        "0x1b5b1ef1a4457a565fa7a62bf3085f0e5fb9e5b6610b0f936256c4657eeaeee2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "winner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoDrawCompleted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x6e43eba1fd6a017296a4699c09d9abef5d390600",
+      "updated_at": 1494926403216
+    },
+    "1494989947942": {
+      "events": {
+        "0xfef4ca33b89ebb5f20fd523d7b35455275881d523ab396b3f6fdbdf3b4257414": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "bidder",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoPurchased",
+          "type": "event"
+        },
+        "0x1b5b1ef1a4457a565fa7a62bf3085f0e5fb9e5b6610b0f936256c4657eeaeee2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "winner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoDrawCompleted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x1b423ce1693c9a9b7042a79ea8033c017abc90ac",
+      "updated_at": 1494990247327
+    },
+    "1498000662464": {
+      "events": {
+        "0xfef4ca33b89ebb5f20fd523d7b35455275881d523ab396b3f6fdbdf3b4257414": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "bidder",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoPurchased",
+          "type": "event"
+        },
+        "0x1b5b1ef1a4457a565fa7a62bf3085f0e5fb9e5b6610b0f936256c4657eeaeee2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "winner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoDrawCompleted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x3ee1e72235bb4675c357e43855011760aa8783c3",
+      "updated_at": 1498009461781
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1498009461781
+}
