@@ -693,8 +693,90 @@
       "links": {},
       "address": "0xfdbdc44fd6c6b1df4636e5c33e2cc97d4f558db7",
       "updated_at": 1508233656047
+    },
+    "1508306917320": {
+      "events": {
+        "0xfef4ca33b89ebb5f20fd523d7b35455275881d523ab396b3f6fdbdf3b4257414": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "bidder",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoPurchased",
+          "type": "event"
+        },
+        "0x1b5b1ef1a4457a565fa7a62bf3085f0e5fb9e5b6610b0f936256c4657eeaeee2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "winner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoDrawCompleted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xbdcec060f0ef36eb3b227305ead297b044a9ec23",
+      "updated_at": 1508307377212
+    },
+    "1508327866451": {
+      "events": {
+        "0xfef4ca33b89ebb5f20fd523d7b35455275881d523ab396b3f6fdbdf3b4257414": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "bidder",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoPurchased",
+          "type": "event"
+        },
+        "0x1b5b1ef1a4457a565fa7a62bf3085f0e5fb9e5b6610b0f936256c4657eeaeee2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "winner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LottoDrawCompleted",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xfbed01986a008cca5a12f5fea94ccacd6df70732",
+      "updated_at": 1508327875688
     }
   },
   "schema_version": "0.0.5",
-  "updated_at": 1508233656047
+  "updated_at": 1508327875688
 }

@@ -136,7 +136,10 @@ console.log(anonySender,ticketNumber)
     var status = document.getElementById("status");
     status.innerHTML = message;
   },
-
+setStatusM: function(message) {
+    var status = document.getElementById("statusM");
+    status.innerHTML = message;
+},
 
   buyAnnonymously: function() {
 
@@ -158,10 +161,16 @@ console.log(anonySender,ticketNumber)
           document.getElementById('address').value = '';
           document.getElementById('ticket').value = '';
       self.setStatus("Successfully purchased your ticket");
+              setTimeout(function(){
+                  self.setStatusM('');
+              },1500)
       // self.refreshBalance();
     }).catch(function(e) {
       console.log(e);
       self.setStatus("Error sending coin; see log.");
+              setTimeout(function(){
+                  self.setStatusM('');
+              },1500)
     });
   },
 
@@ -185,10 +194,16 @@ console.log(anonySender,ticketNumber)
           document.getElementById('address').value = '';
           document.getElementById('ticket').value = '';
           self.setStatus("Successfully purchased your ticket \n email : "+ email);
+              setTimeout(function(){
+                  self.setStatusM('');
+              },1500)
           // self.refreshBalance();
       }).catch(function(e) {
           console.log(e);
           self.setStatus("Error sending coin; see log.");
+              setTimeout(function(){
+                  self.setStatusM('');
+              },1500)
       });
   }  ,
     
@@ -205,6 +220,7 @@ console.log(anonySender,ticketNumber)
   },
 
     checkNumber : function () {
+        var self = this;
         var checkItem = document.getElementById('check').value;
         var winnerEmails = [
             'aj@accubits.com',
@@ -233,11 +249,17 @@ console.log(anonySender,ticketNumber)
         }
 
         if(checkArray.indexOf(checkItem)<0){
-            alert('Sorry Better Luck Next Time.');
+            setTimeout(function(){
+                self.setStatusM('');
+            },1500)
+            self.setStatusM('Sorry Better Luck Next Time.');
         }
         else
         {
-            alert('Hurray.. You have won .\n' + checkItem)
+            setTimeout(function(){
+                self.setStatusM('');
+            },1500)
+            self.setStatusM('Hurray.. You have won .\n' + checkItem);
         }
 
 
